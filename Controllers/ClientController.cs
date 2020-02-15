@@ -1,17 +1,18 @@
 ﻿using Ruler.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Threading.Tasks;
 
 namespace Ruler.Controllers
 {
   [NotMapped]
-  public class ClientController : BaseController
+  public class ClientController : BaseController<Client>
   {
     public void Delete() => base.Delete(0);
 
-    public void Save(Client Entity) => base.Save(Entity);
+    public void Save(Client Entity) =>  base.Save(Entity);
 
-    public ICollection<dynamic> Search() => base.Search(0);
+    public ICollection<Client> Search(int Id) =>  base.Search(Id).Result;
 
     public void Update(Client Entity) => base.Update(Entity);
   }

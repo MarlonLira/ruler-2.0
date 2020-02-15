@@ -4,38 +4,58 @@ using Ruler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace Ruler.Controllers
 {
-  public class BaseController : IEntity
+  public class BaseController<T> : IEntity<T> where T : class
   {
     protected RulerContext _context = new RulerContext();
 
-    public void Delete(int Id)
+    public Task Delete(int Id)
     {
       throw new NotImplementedException();
     }
 
-    public virtual void Save<T>(T Entity) where T : class
+    public virtual async Task Save(T Entity)
     {
       try
       {
         _context.Set<T>().Add(Entity);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
       }
       catch
       {
         throw;
       }
+      finally
+      {
+        if (_context != null && _context.SaveChangesAsync().IsCompleted) _context.Dispose();
+      }
     }
 
-    public ICollection<dynamic> Search(int Id)
+    public virtual async Task<ICollection<T>> Search(int Id)
     {
-      throw new NotImplementedException();
+      var _result = new List<T>();
+      try
+      {
+        var Found = _context.Set<T>().FindAsync(Id);
+        _result.Add(Found.Result);
+      }
+      catch
+      {
+        throw;
+      }
+      finally
+      {
+        if (_context != null && _context.SaveChangesAsync().IsCompleted) _context.Dispose();
+      }
+
+      return _result;
     }
 
-    public void Update<T>(T Entity) where T : class
+    public Task Update(T Entity)
     {
       throw new NotImplementedException();
     }

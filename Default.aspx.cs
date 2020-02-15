@@ -1,5 +1,6 @@
 ﻿using Ruler.Context;
 using Ruler.Controllers;
+using Ruler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,15 @@ namespace Ruler
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      var client = new ClientController();
-      client.Save(new Models.Client() { Name = "Leticia", Phone = "0000000", RegistryCode = "66666" });
+      //var cl = new ClientController();
+      //var a = cl.Search(3);
+      //client = new Client();
+      //client = a.FirstOrDefault<Client>();
+
+      //client.Save(new Models.Client() { Name = "Wedson", Phone = "111111", RegistryCode = "66666" });
     }
+
+    public Client client { get { return new ClientController().Search(3).FirstOrDefault<Client>(); } } 
+    public string Teste { get { return "testando"; } }
   }
 }

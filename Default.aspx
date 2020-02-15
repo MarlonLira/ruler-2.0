@@ -10,6 +10,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
+          <h1>Olá Mundo</h1>
+          <h1>Nome: <%=client.Name%></h1>
+          <h1>Telefone: <%=client.Phone%></h1>
+          <h1>CPF: <%=client.RegistryCode%></h1>
         </div>
     </form>
 </body>
