@@ -1,6 +1,7 @@
 ﻿using Ruler.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Threading.Tasks;
 
 namespace Ruler.Controllers
 {
@@ -9,7 +10,7 @@ namespace Ruler.Controllers
   {
     public void Delete() => base.Delete(0);
 
-    public void Save(Client Entity) => base.Save(Entity);
+    public void Save(Client Entity) =>  base.Save(Entity);
 
     public ICollection<dynamic> Search() => base.Search(0);
 

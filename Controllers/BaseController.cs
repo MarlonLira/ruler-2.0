@@ -4,6 +4,7 @@ using Ruler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace Ruler.Controllers
@@ -17,16 +18,20 @@ namespace Ruler.Controllers
       throw new NotImplementedException();
     }
 
-    public virtual void Save<T>(T Entity) where T : class
+    public virtual async Task Save<T>(T Entity) where T : class
     {
       try
       {
         _context.Set<T>().Add(Entity);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
       }
       catch
       {
         throw;
+      }
+      finally
+      {
+        if(_context != null && _context.SaveChangesAsync().IsCompleted) _context.Dispose();
       }
     }
 

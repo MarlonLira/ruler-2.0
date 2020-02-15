@@ -14,7 +14,7 @@ namespace Ruler
     protected void Page_Load(object sender, EventArgs e)
     {
       var client = new ClientController();
-      client.Save(new Models.Client() { Name = "Leticia", Phone = "0000000", RegistryCode = "66666" });
+      client.Save(new Models.Client() { Name = "Wedson", Phone = "111111", RegistryCode = "66666" });
     }
   }
 }
