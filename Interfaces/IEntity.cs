@@ -3,12 +3,11 @@ using System.Threading.Tasks;
 
 namespace Ruler.Interfaces
 {
-  interface IEntity
+  interface IEntity<T>
   {
-    Task Save<T>(T Entity) where T : class;
-    ICollection<dynamic> Search(int Id);
-    void Update<T>(T Entity) where T : class;
-    void Delete(int Id);
-    
+    Task Save(T Entity);
+    Task<ICollection<T>> Search(int Id);
+    Task Update(T Entity);
+    Task Delete(int Id);
   }
 }
