@@ -8,12 +8,12 @@ namespace Ruler.Controllers
   [NotMapped]
   public class ClientController : BaseController<Client>
   {
-    public void Delete() => base.Delete(0);
+    public new bool Delete(int Id) => base.Delete(Id);
 
-    public void Save(Client Entity) =>  base.Save(Entity);
+    public new bool Save(Client Entity) => base.Save(Entity);
 
-    public ICollection<Client> Search(int Id) =>  base.Search(Id).Result;
+    public new ICollection<Client> Search(int Id) => base.Search(Id);
 
-    public void Update(Client Entity) => base.Update(Entity);
+    public new bool Update(Client Entity) => base.Update(Entity);
   }
 }
