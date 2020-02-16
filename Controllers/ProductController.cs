@@ -11,7 +11,7 @@ namespace Ruler.Controllers
 
     public void Save(Product Entity) => base.Save(Entity);
 
-    public ICollection<Product> Search(int Id) => base.Search(Id).Result;
+    public ICollection<Product> Search(int Id) => base.Search(Id);
 
     public void Update(Product Entity) => base.Update(Entity);
   }
