@@ -206,10 +206,6 @@
     <Compile Include="BasePge.Master.designer.cs">
       <DependentUpon>BasePge.Master</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002170153168_RulerContext.cs" />
-    <Compile Include="Migrations\202002170153168_RulerContext.designer.cs">
-      <DependentUpon>202002170153168_RulerContext.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
@@ -251,11 +247,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002170153168_RulerContext.resx">
-      <DependentUpon>202002170153168_RulerContext.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

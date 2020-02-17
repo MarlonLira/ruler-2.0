@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,9 +18,16 @@ namespace Ruler.Models
     public string Name { get; set; }
 
     [MaxLength(12)]
+    [Display(Name = "Registry Code")]
     public string RegistryCode { get; set; }
 
     [MaxLength(12)]
+    [DisplayFormat(DataFormatString = "{0:###-###-####}", ApplyFormatInEditMode = true)]
     public string Phone { get; set; }
+
+    [DataType(DataType.DateTime)]
+    [Display(Name = "Updated At")]
+    [DefaultValue("getutcdate()")]
+    public DateTime? UpdatedAt { get; set; }
   }
 }
