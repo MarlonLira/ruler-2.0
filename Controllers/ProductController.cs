@@ -7,12 +7,12 @@ namespace Ruler.Controllers
   [NotMapped]
   public class ProductController : BaseController<Product>
   {
-    public void Delete() => base.Delete(0);
+    public new bool Delete(int Id) => base.Delete(Id);
 
-    public void Save(Product Entity) => base.Save(Entity);
+    public new bool Save(Product Entity) => base.Save(Entity);
 
-    public ICollection<Product> Search(int Id) => base.Search(Id);
+    public new ICollection<Product> Search(int Id) => base.Search(Id);
 
-    public void Update(Product Entity) => base.Update(Entity);
+    public new bool Update(Product Entity) => base.Update(Entity);
   }
 }

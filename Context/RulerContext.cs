@@ -9,12 +9,11 @@ namespace Ruler.Context
 {
   public partial class RulerContext : DbContext
   {
-    public RulerContext() : base("name=ruler")
+    public RulerContext() : base("name=ruler1")
     {
     }
     public virtual DbSet<Client> Clients { get; set; }
     public virtual DbSet<Product> Products { get; set; }
-
 
   }
 }
