@@ -1,15 +1,12 @@
 ﻿using Ruler.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Ruler.Context
 {
   public partial class RulerContext : DbContext
   {
-    public RulerContext() : base("name=ruler1")
+    public RulerContext() : base("name=ruler")
     {
       Database.SetInitializer(new MigrateDatabaseToLatestVersion<RulerContext, Migrations.Configuration>());
     }
@@ -18,11 +15,13 @@ namespace Ruler.Context
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
-      //modelBuilder.HasDefaultSchema("ruler");
+      Database.SetInitializer(new CreateDatabaseIfNotExists<RulerContext>());
+      modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+      //modelBuilder.HasDefaultSchema("user");
+      modelBuilder.Entity<Client>().ToTable("Client");
+      modelBuilder.Entity<Product>().ToTable("Product");
 
-      //modelBuilder.Entity<Client>().ToTable("Client");
-
-      //modelBuilder.Entity<Product>().ToTable("Product");
+      base.OnModelCreating(modelBuilder);
     }
 
   }

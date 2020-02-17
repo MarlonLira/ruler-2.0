@@ -1,7 +1,6 @@
 ﻿using Ruler.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Threading.Tasks;
 
 namespace Ruler.Controllers
 {
@@ -12,8 +11,10 @@ namespace Ruler.Controllers
 
     public new bool Save(Client Entity) => base.Save(Entity);
 
-    public new ICollection<Client> Search(int Id) => base.Search(Id);
+    public new ICollection<Client> Search(int Id = 0) => base.Search(Id);
 
-    public new bool Update(Client Entity) => base.Update(Entity);
+    public bool Update(Client Entity) => base.Update(Entity.Id, Entity);
+
+    //public new ICollection<Client> Select(Func<Client, bool> Predicate) => base.Find().Where(Predicate).ToList();
   }
 }

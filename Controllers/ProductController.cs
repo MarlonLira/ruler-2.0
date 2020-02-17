@@ -13,6 +13,7 @@ namespace Ruler.Controllers
 
     public new ICollection<Product> Search(int Id) => base.Search(Id);
 
-    public new bool Update(Product Entity) => base.Update(Entity);
+    public bool Update(Product Entity) => base.Update(Entity.Id, Entity);
+    
   }
 }

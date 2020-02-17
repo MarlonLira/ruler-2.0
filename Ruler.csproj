@@ -74,11 +74,108 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Components\Styles\css\CssUsc.ascx" />
+    <Content Include="Components\Styles\js\JsUsc.ascx" />
+    <Content Include="Components\Template\NavBarUsc.ascx" />
+    <Content Include="Components\Template\SideBarUsc.ascx" />
+    <Content Include="Content\css\adminlte\adminlte.css" />
+    <Content Include="Content\css\adminlte\adminlte.min.css" />
+    <Content Include="Content\css\common\all.css" />
+    <Content Include="Content\css\common\all.min.css" />
+    <Content Include="Content\css\common\font-family-sans.css" />
+    <Content Include="Content\css\common\fontawesome.css" />
+    <Content Include="Content\css\common\fontawesome.min.css" />
+    <Content Include="Content\css\common\ionicons.min.css" />
+    <Content Include="Content\css\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\css\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\css\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\img\AdminLTELogo.png" />
+    <Content Include="Content\img\avatar.png" />
+    <Content Include="Content\img\avatar04.png" />
+    <Content Include="Content\img\avatar2.png" />
+    <Content Include="Content\img\avatar3.png" />
+    <Content Include="Content\img\avatar5.png" />
+    <Content Include="Content\img\boxed-bg.jpg" />
+    <Content Include="Content\img\boxed-bg.png" />
+    <Content Include="Content\img\credit\american-express.png" />
+    <Content Include="Content\img\credit\cirrus.png" />
+    <Content Include="Content\img\credit\mastercard.png" />
+    <Content Include="Content\img\credit\mestro.png" />
+    <Content Include="Content\img\credit\paypal.png" />
+    <Content Include="Content\img\credit\paypal2.png" />
+    <Content Include="Content\img\credit\visa.png" />
+    <Content Include="Content\img\default-150x150.png" />
+    <Content Include="Content\img\icons.png" />
+    <Content Include="Content\img\photo1.png" />
+    <Content Include="Content\img\photo2.png" />
+    <Content Include="Content\img\photo3.jpg" />
+    <Content Include="Content\img\photo4.jpg" />
+    <Content Include="Content\img\prod-1.jpg" />
+    <Content Include="Content\img\prod-2.jpg" />
+    <Content Include="Content\img\prod-3.jpg" />
+    <Content Include="Content\img\prod-4.jpg" />
+    <Content Include="Content\img\prod-5.jpg" />
+    <Content Include="Content\img\user1-128x128.jpg" />
+    <Content Include="Content\img\user2-160x160.jpg" />
+    <Content Include="Content\img\user3-128x128.jpg" />
+    <Content Include="Content\img\user4-128x128.jpg" />
+    <Content Include="Content\img\user5-128x128.jpg" />
+    <Content Include="Content\img\user6-128x128.jpg" />
+    <Content Include="Content\img\user7-128x128.jpg" />
+    <Content Include="Content\img\user8-128x128.jpg" />
+    <Content Include="Content\js\adminlte\adminlte.js" />
+    <Content Include="Content\js\adminlte\adminlte.min.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\chart\Chart.bundle.js" />
+    <Content Include="Content\js\chart\Chart.bundle.min.js" />
+    <Content Include="Content\js\chart\Chart.css" />
+    <Content Include="Content\js\chart\Chart.js" />
+    <Content Include="Content\js\chart\Chart.min.css" />
+    <Content Include="Content\js\chart\Chart.min.js" />
+    <Content Include="Content\js\dashboard\dashboard3.js" />
+    <Content Include="Content\js\demo.js" />
+    <Content Include="Content\js\jquery\core.js" />
+    <Content Include="Content\js\jquery\jquery.js" />
+    <Content Include="Content\js\jquery\jquery.min.js" />
+    <Content Include="Content\js\jquery\jquery.slim.js" />
+    <Content Include="Content\js\jquery\jquery.slim.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HomePge.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Styles\css\CssUsc.ascx.cs">
+      <DependentUpon>CssUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Styles\css\CssUsc.ascx.designer.cs">
+      <DependentUpon>CssUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Styles\js\JsUsc.ascx.cs">
+      <DependentUpon>JsUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Styles\js\JsUsc.ascx.designer.cs">
+      <DependentUpon>JsUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\NavBarUsc.ascx.cs">
+      <DependentUpon>NavBarUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\NavBarUsc.ascx.designer.cs">
+      <DependentUpon>NavBarUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\SideBarUsc.ascx.cs">
+      <DependentUpon>SideBarUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\SideBarUsc.ascx.designer.cs">
+      <DependentUpon>SideBarUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Context\RulerContext.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
@@ -93,10 +190,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="HomePge.aspx.cs">
+      <DependentUpon>HomePge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePge.aspx.designer.cs">
+      <DependentUpon>HomePge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Migrations\202002170153168_RulerContext.cs" />
-    <Compile Include="Migrations\202002170153168_RulerContext.designer.cs">
-      <DependentUpon>202002170153168_RulerContext.cs</DependentUpon>
+    <Compile Include="BasePge.Master.cs">
+      <DependentUpon>BasePge.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePge.Master.designer.cs">
+      <DependentUpon>BasePge.Master</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
@@ -105,6 +213,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Content\js\adminlte\adminlte.js.map" />
+    <Content Include="Content\js\adminlte\adminlte.min.js.map" />
+    <Content Include="Content\css\adminlte\adminlte.css.map" />
+    <Content Include="Content\css\adminlte\adminlte.min.css.map" />
+    <Content Include="Content\js\jquery\jquery.min.map" />
+    <Content Include="Content\js\jquery\jquery.slim.min.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.min.js.map" />
+    <Content Include="BasePge.Master" />
+    <Content Include="Content\css\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\css\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\css\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\css\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\css\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\css\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\css\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\css\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\css\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\css\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\css\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\css\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -116,11 +247,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002170153168_RulerContext.resx">
-      <DependentUpon>202002170153168_RulerContext.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BasePge.Master.cs" Inherits="Ruler.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Ruler</title>
+    <usc:Css runat="server" ID="css_control" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <usc:NavBar runat="server" ID="navbar_control" />
+            <usc:SideBar runat="server" ID="sidebar_control" />
+            <div class="content-wrapper">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="cph_main" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    <usc:Js runat="server" ID="js_control" />
+</body>
+</html>
