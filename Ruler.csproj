@@ -74,6 +74,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\adminlte\adminlte.css" />
+    <Content Include="Content\css\adminlte\adminlte.min.css" />
+    <Content Include="Content\css\all\all.css" />
+    <Content Include="Content\css\all\all.min.css" />
+    <Content Include="Content\css\font\fontawesome.css" />
+    <Content Include="Content\css\font\fontawesome.min.css" />
+    <Content Include="Content\css\icon\ionicons.min.css" />
+    <Content Include="Content\js\adminlte\adminlte.js" />
+    <Content Include="Content\js\adminlte\adminlte.min.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.js" />
+    <Content Include="Content\js\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\chart\Chart.bundle.js" />
+    <Content Include="Content\js\chart\Chart.bundle.min.js" />
+    <Content Include="Content\js\chart\Chart.css" />
+    <Content Include="Content\js\chart\Chart.js" />
+    <Content Include="Content\js\chart\Chart.min.css" />
+    <Content Include="Content\js\chart\Chart.min.js" />
+    <Content Include="Content\js\dashboard\dashboard3.js" />
+    <Content Include="Content\js\jquery\core.js" />
+    <Content Include="Content\js\jquery\jquery.js" />
+    <Content Include="Content\js\jquery\jquery.min.js" />
+    <Content Include="Content\js\jquery\jquery.slim.js" />
+    <Content Include="Content\js\jquery\jquery.slim.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -105,6 +130,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Content\js\adminlte\adminlte.js.map" />
+    <Content Include="Content\js\adminlte\adminlte.min.js.map" />
+    <Content Include="Content\css\adminlte\adminlte.css.map" />
+    <Content Include="Content\css\adminlte\adminlte.min.css.map" />
+    <Content Include="Content\js\jquery\jquery.min.map" />
+    <Content Include="Content\js\jquery\jquery.slim.min.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -115,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
