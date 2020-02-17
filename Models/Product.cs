@@ -19,13 +19,17 @@ namespace Ruler.Models
     [MaxLength(30)]
     public string Brand { get; set; }
 
-    public float Price { get; set; }
+    public Double? Price { get; set; }
 
     [MaxLength(255)]
     public string Label { get; set; }
 
-    public int Lot { get; set; }
-   
+    [MaxLength(12)]
+    public string Lot { get; set; }
+
+    [MaxLength(30)]
+    public string Category { get; set; }
+
     public DateTime ManufactDate { get; set; }
 
     public DateTime? ExpiryDate { get; set; }

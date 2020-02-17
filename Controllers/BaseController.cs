@@ -22,7 +22,7 @@ namespace Ruler.Controllers
       {
         using (var _context = new RulerContext())
         {
-          _context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
+          //_context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
           _context.Set<T>().Add(Entity);
           _context.SaveChanges();
           return true;
