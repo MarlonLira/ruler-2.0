@@ -26,9 +26,10 @@
                         Name = c.String(maxLength: 30),
                         RegistryCode = c.String(maxLength: 12),
                         Brand = c.String(maxLength: 30),
-                        Price = c.Single(nullable: false),
+                        Price = c.Double(),
                         Label = c.String(maxLength: 255),
-                        Lot = c.Int(nullable: false),
+                        Lot = c.String(maxLength: 12),
+                        Category = c.String(maxLength: 30),
                         ManufactDate = c.DateTime(nullable: false),
                         ExpiryDate = c.DateTime(),
                     })

@@ -13,7 +13,7 @@ namespace Ruler.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202002170129533_RulerContext"; }
+            get { return "202002170153168_RulerContext"; }
         }
         
         string IMigrationMetadata.Source
