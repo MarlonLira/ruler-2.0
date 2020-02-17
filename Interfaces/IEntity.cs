@@ -5,9 +5,9 @@ namespace Ruler.Interfaces
 {
   interface IEntity<T>
   {
-    Task Save(T Entity);
-    Task<ICollection<T>> Search(int Id);
-    Task Update(T Entity);
-    Task Delete(int Id);
+    bool Save(T Entity);
+    ICollection<T> Search(int Id);
+    bool Update(T Entity);
+    bool Delete(int Id);
   }
 }

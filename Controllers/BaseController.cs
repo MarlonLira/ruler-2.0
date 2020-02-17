@@ -11,53 +11,50 @@ namespace Ruler.Controllers
 {
   public class BaseController<T> : IEntity<T> where T : class
   {
-    protected RulerContext _context = new RulerContext();
-
-    public Task Delete(int Id)
+    public bool Delete(int Id)
     {
       throw new NotImplementedException();
     }
 
-    public virtual async Task Save(T Entity)
+    public bool Save(T Entity)
     {
       try
       {
-        _context.Set<T>().Add(Entity);
-        await _context.SaveChangesAsync();
+        using (var _context = new RulerContext())
+        {
+          //_context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
+          _context.Set<T>().Add(Entity);
+          _context.SaveChanges();
+          return true;
+        }
+
       }
       catch
       {
         throw;
       }
-      finally
-      {
-        if (_context != null && _context.SaveChangesAsync().IsCompleted) _context.Dispose();
-      }
     }
 
-    public virtual async Task<ICollection<T>> Search(int Id)
+    public bool Update(T Entity)
+    {
+      throw new NotImplementedException();
+    }
+
+    public ICollection<T> Search(int Id)
     {
       var _result = new List<T>();
       try
       {
-        var Found = _context.Set<T>().FindAsync(Id);
-        _result.Add(Found.Result);
+        using (var _context = new RulerContext())
+        {
+          _result.Add(_context.Set<T>().FindAsync(Id).Result);
+          return _result;
+        }
       }
       catch
       {
         throw;
       }
-      finally
-      {
-        if (_context != null && _context.SaveChangesAsync().IsCompleted) _context.Dispose();
-      }
-
-      return _result;
-    }
-
-    public Task Update(T Entity)
-    {
-      throw new NotImplementedException();
     }
   }
 }
