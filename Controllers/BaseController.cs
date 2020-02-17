@@ -1,11 +1,8 @@
 ﻿using Ruler.Context;
 using Ruler.Interfaces;
-using Ruler.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 
 namespace Ruler.Controllers
 {
@@ -13,47 +10,57 @@ namespace Ruler.Controllers
   {
     public bool Delete(int Id)
     {
-      throw new NotImplementedException();
+      using (var context = new RulerContext())
+      {
+        var Found = context.Set<T>().Find(Id);
+        if (Found == null) return false;
+        
+        context.Set<T>().Remove(Found);
+        context.SaveChanges();
+        return true;
+      }
+
     }
 
     public bool Save(T Entity)
     {
-      try
+      if (Entity == null) return false;
+      using (var context = new RulerContext())
       {
-        using (var _context = new RulerContext())
-        {
-          _context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
-          _context.Set<T>().Add(Entity);
-          _context.SaveChanges();
-          return true;
-        }
-
-      }
-      catch
-      {
-        throw;
+        context.Set<T>().Add(Entity);
+        context.SaveChanges();
+        return true;
       }
     }
 
-    public bool Update(T Entity)
+    public bool Update(int Id, T Entity)
     {
-      throw new NotImplementedException();
+      using (var context = new RulerContext())
+      {
+        var Found = context.Set<T>().Find(Id);
+        if (Found == null) return false;
+
+        context.Entry(Found).State = System.Data.Entity.EntityState.Modified;
+        context.Entry(Found).CurrentValues.SetValues(Entity);
+        context.SaveChanges();
+        return true;
+      }
     }
 
-    public ICollection<T> Search(int Id)
+    public ICollection<T> Find(int Id = 0) => Id == 0 ?
+      new RulerContext().Set<T>().AsEnumerable().ToList() :
+      new List<T>() { new RulerContext().Set<T>().Find(Id) };
+
+    public ICollection<T> Search(int Id = 0)
     {
-      var _result = new List<T>();
       try
       {
-        using (var _context = new RulerContext())
-        {
-          _result.Add(_context.Set<T>().FindAsync(Id).Result);
-          return _result;
-        }
+        using (var context = new RulerContext())
+          return Id == 0 ? context.Set<T>().AsEnumerable().ToList() : new List<T>() { context.Set<T>().Find(Id) };
       }
-      catch
+      catch (Exception Except)
       {
-        throw;
+        throw new Exception(Except.Message);
       }
     }
   }

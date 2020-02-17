@@ -44,5 +44,10 @@ namespace Ruler.Models
     [Display(Name = "Updated At")]
     public DateTime? UpdatedAt { get; set; }
 
+    public Product()
+    {
+      UpdatedAt = DateTime.UtcNow.AddHours(-3);
+    }
+
   }
 }

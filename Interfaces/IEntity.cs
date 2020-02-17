@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Ruler.Interfaces
 {
@@ -7,7 +6,7 @@ namespace Ruler.Interfaces
   {
     bool Save(T Entity);
     ICollection<T> Search(int Id);
-    bool Update(T Entity);
+    bool Update(int Id, T Entity);
     bool Delete(int Id);
   }
 }

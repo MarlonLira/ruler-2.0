@@ -1,5 +1,4 @@
-﻿using Ruler.Context;
-using Ruler.Controllers;
+﻿using Ruler.Controllers;
 using Ruler.Models;
 using System;
 using System.Collections.Generic;
@@ -14,19 +13,14 @@ namespace Ruler
     protected void Page_Load(object sender, EventArgs e)
     {
       LoadEntities();
-      //var cl = new ClientController();
-      //var b = cl.Save(new Client() { Name = "Marlon", Phone = "81985665252", RegistryCode = "02536547752" });
-      ////var r = cl.Search(1);
+      
+      //var cl1 = new ClientController().Search(1);
+      //var cl2 = new ClientController().Search().Where(x => x.Name.Contains("Marlon") || x.Name.Contains("Arthur")).ToList();
+      //new ClientController().Save(new Client() { Name = "Leticia Lira", Phone = "81889445836", RegistryCode = "08568524775" });
+      //new ClientController().Update(new Client() { Id=1, Name = "Marlon Lira", Phone = "81986587585", RegistryCode = "0926658587" });
+      //new ClientController().Delete(8);
 
-      //var p1 = new ProductController();
-      //var a = p1.Save(new Product()
-      //{
-      //  Name = "Notebook",
-      //  Brand = "Dell",
-      //  ManufactDate = DateTime.UtcNow.AddHours(-3)
-      //});
-
-      //Response.Redirect("HomePge.aspx", false);
+      Response.Redirect("HomePge.aspx", false);
 
     }
 
