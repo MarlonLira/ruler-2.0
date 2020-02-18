@@ -13,9 +13,9 @@ namespace Ruler
     protected void Page_Load(object sender, EventArgs e)
     {
       LoadEntities();
-      
-      //var cl1 = new ClientController().Search(1);
-      //var cl2 = new ClientController().Search().Where(x => x.Name.Contains("Marlon") || x.Name.Contains("Arthur")).ToList();
+
+      var cl1 = new ClientController().Search();
+      var cl2 = new ClientController().Search().Where(x => x.Name.Contains("Marlon") || x.Name.Contains("Arthur")).ToList();
       //new ClientController().Save(new Client() { Name = "Leticia Lira", Phone = "81889445836", RegistryCode = "08568524775" });
       //new ClientController().Update(new Client() { Id=1, Name = "Marlon Lira", Phone = "81986587585", RegistryCode = "0926658587" });
       //new ClientController().Delete(8);
