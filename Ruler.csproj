@@ -94,6 +94,7 @@
     <Content Include="Content\css\common\fontawesome.css" />
     <Content Include="Content\css\common\fontawesome.min.css" />
     <Content Include="Content\css\common\ionicons.min.css" />
+    <Content Include="Content\css\Custom.css" />
     <Content Include="Content\css\webfonts\fa-brands-400.svg" />
     <Content Include="Content\css\webfonts\fa-regular-400.svg" />
     <Content Include="Content\css\webfonts\fa-solid-900.svg" />
