@@ -6,7 +6,7 @@ namespace Ruler.Context
 {
   public partial class RulerContext : DbContext
   {
-    public RulerContext() : base("name=ruler1")
+    public RulerContext() : base("name=ruler")
     {
       Database.SetInitializer(new MigrateDatabaseToLatestVersion<RulerContext, Migrations.Configuration>());
     }

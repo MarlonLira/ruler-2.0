@@ -79,6 +79,11 @@
     <Content Include="Components\Common\TextBoxUsc.ascx" />
     <Content Include="Components\Styles\css\CssUsc.ascx" />
     <Content Include="Components\Styles\js\JsUsc.ascx" />
+    <Content Include="Components\Template\Common\DropdownNtfUsc.ascx" />
+    <Content Include="Components\Template\Other\DropdownItemUsc.ascx" />
+    <Content Include="Components\Template\Common\DropdownMnUsc.ascx" />
+    <Content Include="Components\Template\Common\NavbarLinkUsc.ascx" />
+    <Content Include="Components\Template\Common\SearchFormUsc.ascx" />
     <Content Include="Components\Template\NavBarUsc.ascx" />
     <Content Include="Components\Template\SideBarUsc.ascx" />
     <Content Include="Content\css\adminlte\adminlte.css" />
@@ -186,6 +191,41 @@
     </Compile>
     <Compile Include="Components\Styles\js\JsUsc.ascx.designer.cs">
       <DependentUpon>JsUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\Common\DropdownNtfUsc.ascx.cs">
+      <DependentUpon>DropdownNtfUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\Common\DropdownNtfUsc.ascx.designer.cs">
+      <DependentUpon>DropdownNtfUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\Other\DropdownItemUsc.ascx.cs">
+      <DependentUpon>DropdownItemUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\Other\DropdownItemUsc.ascx.designer.cs">
+      <DependentUpon>DropdownItemUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\Common\DropdownMnUsc.ascx.cs">
+      <DependentUpon>DropdownMnUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\Common\DropdownMnUsc.ascx.designer.cs">
+      <DependentUpon>DropdownMnUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\Common\NavbarLinkUsc.ascx.cs">
+      <DependentUpon>NavbarLinkUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\Common\NavbarLinkUsc.ascx.designer.cs">
+      <DependentUpon>NavbarLinkUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Template\Common\SearchFormUsc.ascx.cs">
+      <DependentUpon>SearchFormUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Template\Common\SearchFormUsc.ascx.designer.cs">
+      <DependentUpon>SearchFormUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Template\NavBarUsc.ascx.cs">
       <DependentUpon>NavBarUsc.ascx</DependentUpon>
