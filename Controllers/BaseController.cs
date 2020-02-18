@@ -19,7 +19,6 @@ namespace Ruler.Controllers
         context.SaveChanges();
         return true;
       }
-
     }
 
     public bool Save(T Entity)
