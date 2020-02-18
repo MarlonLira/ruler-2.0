@@ -74,6 +74,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Components\Common\BaseCommonUsc.ascx" />
+    <Content Include="Components\Common\ButtonUsc.ascx" />
+    <Content Include="Components\Common\TextBoxUsc.ascx" />
     <Content Include="Components\Styles\css\CssUsc.ascx" />
     <Content Include="Components\Styles\js\JsUsc.ascx" />
     <Content Include="Components\Template\NavBarUsc.ascx" />
@@ -145,9 +148,31 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePge.aspx" />
+    <Content Include="Views\Componentes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Common\BaseCommonUsc.ascx.cs">
+      <DependentUpon>BaseCommonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\BaseCommonUsc.ascx.designer.cs">
+      <DependentUpon>BaseCommonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\ButtonUsc.ascx.cs">
+      <DependentUpon>ButtonUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\ButtonUsc.ascx.designer.cs">
+      <DependentUpon>ButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\TextBoxUsc.ascx.cs">
+      <DependentUpon>TextBoxUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\TextBoxUsc.ascx.designer.cs">
+      <DependentUpon>TextBoxUsc.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\Styles\css\CssUsc.ascx.cs">
       <DependentUpon>CssUsc.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +235,13 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Componentes.aspx.cs">
+      <DependentUpon>Componentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Componentes.aspx.designer.cs">
+      <DependentUpon>Componentes.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
@@ -237,7 +269,6 @@
     <Content Include="Content\css\webfonts\fa-solid-900.woff" />
     <Content Include="Content\css\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
-    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -246,7 +277,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
