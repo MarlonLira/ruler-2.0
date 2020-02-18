@@ -11,5 +11,10 @@ namespace Ruler.Components.Common
   {
     public string Placeholder { get; set; }
     public string Value { get; set; }
+
+    public string LoadIcon()
+    {
+      return "";
+    }
   }
 }
