@@ -76,6 +76,7 @@
   <ItemGroup>
     <Content Include="Components\Common\BaseCommonUsc.ascx" />
     <Content Include="Components\Common\ButtonUsc.ascx" />
+    <Content Include="Components\Common\CheckBoxUsc.ascx" />
     <Content Include="Components\Common\TextBoxUsc.ascx" />
     <Content Include="Components\Styles\css\CssUsc.ascx" />
     <Content Include="Components\Styles\js\JsUsc.ascx" />
@@ -171,6 +172,13 @@
     </Compile>
     <Compile Include="Components\Common\ButtonUsc.ascx.designer.cs">
       <DependentUpon>ButtonUsc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\CheckBoxUsc.ascx.cs">
+      <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\CheckBoxUsc.ascx.designer.cs">
+      <DependentUpon>CheckBoxUsc.ascx</DependentUpon>
     </Compile>
     <Compile Include="Components\Common\TextBoxUsc.ascx.cs">
       <DependentUpon>TextBoxUsc.ascx</DependentUpon>

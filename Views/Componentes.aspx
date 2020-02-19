@@ -9,6 +9,12 @@
       <div class="card-body">
         <usc:TextBox runat="server" Id="txtNome" Value="nome" Title="Nome" Type="text" Placeholder="Digite seu nome" />
         <usc:TextBox runat="server" Id="txtNumber" Title="Número" Type="number" Placeholder="Digite o seu número" />
+        
+        <div class="row">
+            <usc:CheckBox runat="server" Id="chBox" Type="checkbox" />
+            <label>Remember Me</label>
+        </div>
+        
       </div>
       <div class="card-footer">
         <usc:Button runat="server" Id="btnSalvar" Title="Salvar" />

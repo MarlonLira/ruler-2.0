@@ -4,6 +4,8 @@ namespace Ruler.Components.Common
 {
   public partial class ButtonUsc : BaseCommonUsc
   {
+    public string Text { get; set; }
+
     public delegate void OnclickEvent();
     public event OnclickEvent OnClick;
 
