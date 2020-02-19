@@ -1,3 +1,3 @@
 ﻿<%@ Control Language="C#" CodeBehind="ButtonUsc.ascx.cs" Inherits="Ruler.Components.Common.ButtonUsc" %>
 
-<button id="btn" runat="server" class="btn btn-primary" onserverclick="Btn_Click"><%=Text%> </button>
+<button id="btnControl" runat="server" class="btn btn-primary" onserverclick="Btn_Click"><%=Text%> </button>
