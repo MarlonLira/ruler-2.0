@@ -9,6 +9,14 @@ namespace Ruler.Components.Common
 {
   public partial class ChekBoxUsc : BaseCommonUsc
   {
+  
+    public bool IsChecked { get { return chkControl.Checked; } }
+
+    public void Checked()
+    {
+      chkControl.Attributes.Add("checked", "checked");
+      chkControl.Checked = true;
+    }
 
   }
 }

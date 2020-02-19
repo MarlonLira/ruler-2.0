@@ -94,6 +94,8 @@
     <Content Include="Content\css\common\font-family-sans.css" />
     <Content Include="Content\css\common\fontawesome.css" />
     <Content Include="Content\css\common\fontawesome.min.css" />
+    <Content Include="Content\css\common\icheck-bootstrap.css" />
+    <Content Include="Content\css\common\icheck-bootstrap.min.css" />
     <Content Include="Content\css\common\ionicons.min.css" />
     <Content Include="Content\css\Custom.css" />
     <Content Include="Content\css\webfonts\fa-brands-400.svg" />

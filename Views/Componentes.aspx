@@ -11,6 +11,10 @@
         <usc:TextBox runat="server" Id="txtNome" Value="nome" Icon="envelope-open" Type="text" Placeholder="Digite seu nome" />
         <label>Number</label>
         <usc:TextBox runat="server" Id="txtNumber" Type="number" Icon="lock" Placeholder="Digite o seu número" />
+
+          <div class="row">
+            <usc:CheckBox runat="server" Id="chkBox" Text="aqui" />
+        </div>
       </div>
       <div class="card-footer">
         <usc:Button runat="server" Id="btnSalvar" Text="Salvar" />

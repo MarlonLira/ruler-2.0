@@ -2,6 +2,7 @@
 
 <div class="col-8">
     <div class="icheck-primary">
-        <input type="<%=Type%>" id="<%=Id%>">
+        <input  runat="server" type="checkbox" id="chkControl" >
+        <label for="remember"><%=Text%></label>
     </div>
 </div>

@@ -5,6 +5,9 @@
 <!-- Custom css -->
 <link href="<%=Globals.FormatUrl("/Content/css/Custom.css") %>" rel="stylesheet" />
 
+<!-- CheckBox -->
+<link href="<%=Globals.FormatUrl("/Content/css/common/icheck-bootstrap.min.css") %>" rel="stylesheet" />
+
 <!-- Font Awesome Icons -->
 <link href="<%=Globals.FormatUrl("/Content/css/common/all.min.css") %>" rel="stylesheet" />
 

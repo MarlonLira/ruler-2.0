@@ -8,7 +8,7 @@
 <script src="<%=Globals.FormatUrl("/Content/js/bootstrap/bootstrap.bundle.min.js") %>" ></script>
 
 <!-- AdminLTE -->
-<script src="<%=Globals.FormatUrl("/Content/js/adminlte/adminlte.js") %>" ></script>
+<script src="<%=Globals.FormatUrl("/Content/js/adminlte/adminlte.min.js") %>" ></script>
 
 <!-- OPTIONAL SCRIPTS -->
 <script src="<%=Globals.FormatUrl("/Content/js/chart/Chart.min.js") %>" ></script>

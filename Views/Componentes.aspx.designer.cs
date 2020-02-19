@@ -33,13 +33,13 @@ namespace Ruler.Views
     protected global::Ruler.Components.Common.TextBoxUsc txtNumber;
 
     /// <summary>
-    /// chBox control.
+    /// chkBox control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::Ruler.Components.Common.ChekBoxUsc chBox;
+    protected global::Ruler.Components.Common.ChekBoxUsc chkBox;
 
     /// <summary>
     /// btnSalvar control.
